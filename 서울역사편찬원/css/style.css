@@ -1,0 +1,133 @@
+a{color: #222; text-decoration: none;}
+#wrap{width: 100%;}
+
+
+/* 스와이퍼 공통제어 */
+.swiper-nextBtn{width: 9px; height: 14px; background: url(../img/icon/main_slide_right.svg) no-repeat;}
+.swiper-prevBtn{width: 9px; height: 14px; background: url(../img/icon/main_slide_left.svg);}
+.swiper_pagination{width: 40px; height: 16px; text-align: center; position:  relative; top: -1px;} 
+.swiper_pauseBtn{margin-left: 20px; width: 24px; height: 16px; border-radius: 3px; background: rgba(0,0,0,.5) url(../img/icon/slide_pause.png) no-repeat center center; border: none;}
+.swiper_playBtn{margin-left: 20px; width: 24px; height: 16px; border-radius: 3px; background: rgba(0,0,0,.5) url(../img/icon/slide_start.png) no-repeat center center; border: none;}
+.swiper-button-disabled{opacity: .35; cursor: auto; pointer-events: none;}
+
+
+
+
+
+
+#header{width: 100%; height: 140px; border-bottom: 1px solid #ddd; position: fixed; top: 0; left: 0; background: #fff; z-index: 1000; box-shadow: 0 1px 10px rgba(0,0,0,.4); transition: .3s;}
+
+.headerTopNav{width: 100%; height: 48px; border-bottom: 1px solid #ddd; position: relative; transition: .3s;}
+.container{width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; height: inherit; align-items: center; transition: .3s;}
+
+.headerTopLeftLogo{display: flex; align-items: center;}
+.headerTopLeftLogo h1>a{width: 107px; height: 27px; display: block; text-indent: -99999px; background: url(../img/icon/icon_set_common.png)no-repeat 0 -166px;}
+.headerTopLeftLogo h1{margin-right: 50px;}
+.headerTopLeftLogo p{display: flex;}
+.headerTopLeftLogo p span{display: inline-block; width: 19px; height: 17px; background: url(../img/icon/ico-sprite-common-gnb.png) no-repeat 0 -42px; text-indent: -99999999px;}
+.headerTopLeftLogo p i{font-size: 14px; color: #575757; padding-left: 5px;
+position: relative; top: 2px;}
+
+
+.headerTopRightGnb ul{display: flex;}
+.headerTopRightGnb ul li{margin-left: 16px;}
+.headerTopRightGnb ul li a{color: #575757; font-size: 14px; font-weight: 600;} 
+
+.headerBottomNav{height: 90px;}
+.headerBottomNav nav .bg{position: absolute; top: 140px; left: 0; background: rgb(255, 255, 255); width: 100%; height: 0; border-bottom: 2px solid #fff; overflow: hidden; transition:height .3s;}
+.headerBottomNav nav:hover .bg{height: 200px; border-bottom: 2px solid #ddd;}
+.headerBottomNav nav>ul{display: flex; }
+.headerBottomNav nav>ul>li{width: 120px; text-align: center;}
+.headerBottomNav nav>ul>li>a{display: block; width: 120px; padding: 39px 0; position: relative; font-weight: 600;}
+.headerBottomNav nav>ul>li>a .icon{width: 20px; height: 20px; display: inline-block; background: url(../img/icon/icon_link.svg) no-repeat center center; position: absolute; top: 36px; left: 97px;}
+
+.headerBottomNav nav>ul>li>ul{position: absolute; width: 120px; text-align: center; /* padding: 10px 0; */ overflow: hidden; height: 0; transition: .3s;}
+.headerBottomNav nav>ul>li:hover>ul{height: 200px; padding: 10px 0;}
+.headerBottomNav nav>ul>li>ul>li{line-height: 200%;}
+.headerBottomNav nav>ul>li:hover >a{color: rgb(161, 15, 15);}
+/* 서브메뉴 항목에 마우스 올렸을 때 → 해당 항목만 스타일 변경 */
+.headerBottomNav nav > ul > li > ul > li:hover > a {
+  color: rgb(161, 15, 15);
+  border-bottom: 1px solid rgb(161, 15, 15);
+  font-weight: 600;
+}
+/* 메뉴 전체에 마우스 올리면 전체 서브메뉴 열리게 하기 */
+.headerBottomNav nav:hover ul ul {
+  height: 200px;
+  padding: 10px 0;
+}
+
+
+
+
+
+
+
+.mobileLogo{display: none; transition: .3s;}
+
+
+.searchBox .mobile{display: none;}
+
+
+
+
+#content{width: 100%; padding-top: 150px; margin-bottom: 70px;}
+.section01{position: relative; margin-top: 50px;}
+.section01 .swiper-slide{width: 100%; height: 750px; background-repeat: no-repeat; background-size: 1920px; background-position: center bottom; transform: translateZ(0);}
+.section01 .inner_wrap{margin-top: 30px;}
+.section01 .inner_wrap>div{width: 1140px; margin: 0 auto;}
+.section01 .inner_wrap>div>p{font-size: 22px; margin-bottom: 20px;}
+.section01 .inner_wrap>div>h3{font-size: 48px; font-weight: 700;}
+.controller_wrap{position: absolute; max-width: 1140px; margin: 0 auto; width: 100%; height: 40px; top: 158px; left: 50%; transform: translateX(-50%); z-index: 99;}
+.controller_wrap>div{display: flex;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1140px) {
+    #header{ height: auto;}
+    .headerTopNav{display: none;}
+    .container{width: 100%; padding: 0 20px; box-sizing: border-box;}
+    .headerBottomNav nav{display: none; }
+
+    .mobileLogo{display: block;}
+    .mobileLogo a img{width: 27px;}
+
+    .searchBox{display: flex; align-items: center;}
+    .searchBox .mobile{display: block; width: 24px; height: 16px; margin-left: 10px; cursor: pointer; position: relative;}
+    .searchBox .mobile>div{width: 100%; height: 2px; background: #2e2e2e; position: absolute; top: 0; left: 0; transition: .3s;}
+    .searchBox .mobile .line1{transform: rotate(0deg);}
+    .searchBox .mobile .line2{top: 50%; opacity: 1;}
+    .searchBox .mobile .line3{top: 100%; transform: rotate(0deg);}
+
+    .searchBox .mobile .line1.active{top: 50%; transform: rotate(45deg);}
+    .searchBox .mobile .line2.active{opacity: 0;}
+    .searchBox .mobile .line3.active{top: 50%; transform: rotate(-45deg);}
+
+    .headerBottomNav nav{display: none; position: absolute; top: 90px; width: 100%; left: 0;}
+    .headerBottomNav nav.active{display: block;}
+    .headerBottomNav nav .bg{display: none;}
+    .headerBottomNav nav>ul{flex-direction: column; width: 100%;}
+    .headerBottomNav nav>ul>li{width: 100%; text-align: left;}
+    .headerBottomNav nav>ul>li>a{display: block; width: 100%; padding: 0;  height: 50px; border-bottom: 1px solid #ddd; line-height: 50px; padding-left: 20px;}
+    .headerBottomNav nav>ul>li>a>.icon{
+        top: 15px;
+    }
+    .headerBottomNav nav>ul>li>ul{position: static; width: 100%; text-align: left; overflow: hidden; height: auto; transition: none; background: rgb(177, 1, 1); display: none;}
+    .headerBottomNav nav:hover>ul>li>ul{height: auto; padding: 0;}
+    .headerBottomNav nav>ul>li>ul>li{height: 50px; line-height: 50px; padding-left: 20px;}
+    .headerBottomNav nav>ul>li>ul>li>a{color: #fff;}
+    .headerBottomNav nav>ul>li>ul>li:hover>a{color: #303030;}
+    
+}
