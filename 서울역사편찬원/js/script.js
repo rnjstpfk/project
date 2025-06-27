@@ -227,9 +227,39 @@ $(function () {
   });
 
 
-
-  $('.familysite .btn').click(function(){
-      $('.sitebox').toggleClass('on');
+ //토글
+  $('.familysite .btn').click(function () {
+    $(this).toggleClass('on');
+    $('.sitebox').toggleClass('on');
   });
 
-})
+
+
+  //랜덤 이미지
+  const randomNum = Math.floor(Math.random() * 4) + 1;
+
+  // 이미지 경로 설정
+  const newImgPath = `./img/icon/footer/footer0${randomNum}.png`;
+  console.log(randomNum);
+
+  // 이미지 변경
+  $('#footerImg').attr('src', newImgPath);
+
+
+
+  //스크롤 탑
+  $(window).scroll(function(){
+      if($(this).scrollTop() > 800){
+        $('.scrollTopBtn').fadeIn();
+      }else{
+        $('.scrollTopBtn').fadeOut();
+      }
+  });
+
+  $('.scrollTopBtn').click(function(){
+    $('html, body').animate({
+        scrollTop:0
+    },600);
+  });
+
+});
